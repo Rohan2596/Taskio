@@ -14,62 +14,122 @@
         android:background="#e5e5e5"
         android:layout_marginTop="12dp"
         android:padding="10dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#fff"
-            android:clickable="false"
-            android:clipToPadding="true"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
-                android:layout_width="75dp"
-                android:layout_height="45dp"
-                android:src="@drawable/ic_launcher_foreground"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="2dp" />
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_width="205dp"
+                android:id="@+id/profile_layout"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">
+                android:background="#fff"
+                android:clickable="false"
+                android:clipToPadding="true"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
-                <TextView
-                    android:layout_width="200dp"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="75dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="205dp"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="Rohan Kadam"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                    android:textColor="#000"
-                    android:textStyle="bold">
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
 
-                </TextView>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Rohan Kadam"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="#000"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Stack Developer"
+                        android:textColor="#000">
+
+                    </TextView>
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/notification_image"
+                    android:layout_width="75dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_notification_foreground" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/profile_layout"
+                android:padding="10dp"
+                android:id="@+id/mytask_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
 
                 <TextView
+                    android:id="@+id/mytask"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Full Stack Developer"
-                    android:textColor="#000">
-
-                </TextView>
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text="My Tasks" />
+                <TextView
+                    android:id="@+id/my_viewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#ff0000"
+                    android:textAlignment="textEnd"
+                    android:text="ViewAll"
+                    android:layout_gravity="end" />
             </LinearLayout>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/notification_image"
-                android:layout_width="75dp"
-                android:layout_height="45dp"
-                android:layout_gravity="end"
-                android:src="@drawable/ic_notification_foreground" />
-        </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/mytask_layout"
+                android:padding="10dp"
+                android:id="@+id/current_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/current_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text="On Going Task" />
+                <TextView
+                    android:id="@+id/current_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#ff0000"
+                    android:textAlignment="textEnd"
+                    android:text="ViewAll"
+                    android:layout_gravity="end" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
 
     </ScrollView>
 

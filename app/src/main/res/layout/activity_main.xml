@@ -51,6 +51,7 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:text="Rohan Kadam"
+                        android:fontFamily="@font/poppins_medium"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:textColor="#000"
                         android:textStyle="bold">
@@ -61,6 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Full Stack Developer"
+                        android:fontFamily="@font/poppins_medium"
                         android:textColor="#000">
 
                     </TextView>
@@ -87,6 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="#000"
                     android:text="My Tasks" />
                 <TextView
@@ -95,6 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#ff0000"
+                    android:fontFamily="@font/poppins_medium"
                     android:textAlignment="textEnd"
                     android:text="ViewAll"
                     android:layout_gravity="end" />
@@ -115,8 +119,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="#000"
-                    android:text="On Going Task" />
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Progress"
+                    android:textColor="#000" />
                 <TextView
                     android:id="@+id/current_all"
                     android:layout_width="wrap_content"
@@ -156,6 +161,7 @@
                 <TextView
                     android:textColor="#fff"
                     android:text="Home"
+                    android:fontFamily="@font/poppins_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     >
@@ -175,6 +181,7 @@
                 <TextView
                     android:textColor="#fff"
                     android:text="Calendar"
+                    android:fontFamily="@font/poppins_medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     >
@@ -186,8 +193,10 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         app:layout_anchor="@id/bottomAppBar"
         app:srcCompat="@drawable/ic_add_24" />
 

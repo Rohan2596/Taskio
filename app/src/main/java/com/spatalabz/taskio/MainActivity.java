@@ -10,21 +10,21 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    FloatingActionButton floatingActionButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent toTask=new Intent(MainActivity.this,CreateActivity.class);
-        startActivity(toTask);
-        floatingActionButton=findViewById(R.id.createTask);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+
+
+
+
+    }
+
+    public void home(View view) {
+
                 Intent toTask=new Intent(MainActivity.this,CreateActivity.class);
                 startActivity(toTask);
-            }
-        });
     }
 }

@@ -16,13 +16,20 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/back_arrow"
             android:src="@drawable/ic_arrow_back"
             android:layout_alignStart="@id/relativeTop"
             android:layout_width="wrap_content"
-
+           android:onClick="back"
             android:layout_height="wrap_content"
             tools:ignore="NotSibling" />
-
+<TextView
+    android:layout_toRightOf="@id/back_arrow"
+    android:text="Create New Task"
+    android:textColor="@color/colorPrimary"
+    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,6 +38,61 @@
             tools:ignore="NotSibling" />
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/relativeTop"
+        android:padding="10dp"
+        android:id="@+id/edit_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/taskTitle"
+            android:hint="Task Title"
+            android:textColorHint="@color/colorPrimary"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:background="@drawable/input"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:padding="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Members"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <ImageView
+                android:src="@drawable/ic_baseline_add_24"
+                android:gravity="end"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </ImageView>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/taskDescription"
+            android:hint="Task Description"
+            android:layout_marginTop="4dp"
+            android:textColorHint="@color/colorPrimary"
+            android:minHeight="200dp"
+            android:gravity="start"
+            android:background="@drawable/input"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

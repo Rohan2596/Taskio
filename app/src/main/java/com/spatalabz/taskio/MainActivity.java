@@ -17,14 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
     }
 
     public void home(View view) {
-
-                Intent toTask=new Intent(MainActivity.this,CreateActivity.class);
-                startActivity(toTask);
+        Intent toTask=new Intent(MainActivity.this,CreateActivity.class);
+        startActivity(toTask);
     }
 }

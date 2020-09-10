@@ -21,6 +21,7 @@
             android:layout_alignStart="@id/relativeTop"
             android:layout_width="wrap_content"
            android:onClick="back"
+            android:padding="2dp"
             android:layout_height="wrap_content"
             tools:ignore="NotSibling" />
 <TextView
@@ -74,6 +75,30 @@
             <ImageView
                 android:src="@drawable/ic_baseline_add_24"
                 android:gravity="end"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Time Period"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <ImageView
+                android:id="@+id/add_date"
+                android:src="@drawable/ic_baseline_add_24"
+                android:gravity="end"
+                android:clickable="true"
                 android:textColor="@color/colorPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">

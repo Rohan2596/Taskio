@@ -102,11 +102,23 @@
                     android:textAlignment="textEnd"
                     android:text="ViewAll"
                     android:layout_gravity="end" />
+
+
             </LinearLayout>
+            <ImageView
+                android:layout_below="@id/mytask_layout"
+                android:id="@+id/imageView"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/input" />
+
+
 
 
             <LinearLayout
-                android:layout_below="@id/mytask_layout"
+                android:layout_below="@id/imageView"
                 android:padding="10dp"
                 android:id="@+id/current_layout"
                 android:layout_width="match_parent"
@@ -131,8 +143,15 @@
                     android:textAlignment="textEnd"
                     android:text="ViewAll"
                     android:layout_gravity="end" />
-            </LinearLayout>
 
+            </LinearLayout>
+            <ImageView
+                android:layout_below="@id/current_layout"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/input" />
         </RelativeLayout>
 
 
